@@ -1,0 +1,8 @@
+.pic{display:block;float:left;width:150px;height:150px;position:relative;overflow:hidden;border-radius:4px;margin:0 4px 4px 0;}
+.pic .control{position:absolute;bottom:0;left:0;right:0;display:none;}
+.pic:hover .control{display:block;text-align:center;}
+.pic.empty{border: 3px dashed #ddd;cursor:pointer;}
+.empty .glyphicon{font-size:32px;color:#ddd;position:absolute;top:38%;left:38%;}
+.empty:hover .glyphicon{color:#999;}
+
+.ui-menu{z-index:2000;}
