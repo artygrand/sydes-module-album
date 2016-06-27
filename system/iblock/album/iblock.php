@@ -41,5 +41,5 @@ if ($args['limit']){
 	$result['pictures'] = array_slice($result['pictures'], $skip, $args['limit']);
 }
 
-$stmt = $this->db->query("SELECT tag FROM album_tags GROUP BY tag");
+$stmt = $this->db->query("SELECT tag FROM album_tags WHERE picture_id IN (SELECT id FROM album_pictures WHERE album_id = " . (int)$args['show'] . ") GROUP BY tag");
 $result['tags'] = $stmt->fetchAll(PDO::FETCH_COLUMN);
