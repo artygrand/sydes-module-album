@@ -6,5 +6,5 @@ Create a beautiful gallery with tags and captions. Sort by drag-n-drop. Show in 
 
 1. Download archive
 2. Upload files
-3. Install it!
+3. Install module in admin
 
