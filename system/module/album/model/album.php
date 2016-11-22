@@ -104,6 +104,8 @@ class AlbumModel extends Model{
 	public function delpic($id){
 		$stmt = $this->db->prepare("DELETE FROM album_pictures WHERE id = :id");
 		$stmt->execute(array('id' => $id));
+		$stmt = $this->db->prepare("DELETE FROM album_tags WHERE picture_id = :id");
+		$stmt->execute(array('id' => $id));
 	}
 
 	public function sort($pics){
